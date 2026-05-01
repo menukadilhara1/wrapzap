@@ -1,11 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import path from "path";
 
 export default defineConfig({
   plugins: [
+    TanStackRouterVite({ target: "react", autoCodeSplitting: true }),
     react(),
+    tailwindcss(),
     ViteImageOptimizer(),
   ],
   resolve: {
@@ -15,5 +19,8 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
+  },
+  server: {
+    port: 8080,
   },
 });
