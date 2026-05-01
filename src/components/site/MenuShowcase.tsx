@@ -2,8 +2,6 @@ import steakBowl from "@/assets/dish-steak-bowl.jpg";
 import salmonWrap from "@/assets/dish-salmon-wrap.jpg";
 import medWrap from "@/assets/dish-mediterranean.jpg";
 
-import { motion } from "framer-motion";
-
 const dishes = [
   {
     img: medWrap,
@@ -57,13 +55,9 @@ export function MenuShowcase() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        {dishes.map((d, index) => (
-          <motion.article
+        {dishes.map((d) => (
+          <article
             key={d.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
             className="bg-card p-3 rounded-[2rem] border border-border/60 hover:-translate-y-1 transition-all duration-500 group glass-edge"
             style={{ boxShadow: "var(--shadow-soft)" }}
           >
@@ -95,7 +89,7 @@ export function MenuShowcase() {
                 </span>
               </div>
             </div>
-          </motion.article>
+          </article>
         ))}
       </div>
     </section>

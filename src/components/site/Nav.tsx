@@ -5,7 +5,7 @@ export function Nav() {
     <nav className="fixed top-0 inset-x-0 h-20 z-50 flex items-center justify-between px-6 lg:px-10 backdrop-blur-2xl bg-background/60 border-b border-white/30">
       <div className="flex items-center gap-8">
         <a href="#" className="flex items-center" aria-label="WrapZapEats">
-          <img src={logo} alt="WrapZapEats — Zap Your Hunger" className="h-12 w-auto" />
+          <img src={logo} alt="WrapZapEats — Zap Your Hunger" className="h-12 w-auto" width="180" height="48" />
         </a>
         <div className="hidden lg:flex gap-7 text-sm font-medium text-muted-foreground">
           <a href="#menu" className="hover:text-foreground transition-colors">

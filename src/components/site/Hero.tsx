@@ -1,5 +1,4 @@
 import heroImg from "@/assets/hero-phone-app.png";
-import { motion } from "framer-motion";
 
 export function Hero() {
   return (
@@ -15,12 +14,7 @@ export function Hero() {
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Left */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="lg:col-span-5 flex flex-col gap-8"
-        >
+        <div className="lg:col-span-5 flex flex-col gap-8">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-soft border border-accent/10 w-fit">
             <span className="size-1.5 rounded-full bg-accent animate-pulse" />
             <span className="text-xs font-bold text-accent tracking-widest uppercase">
@@ -57,15 +51,10 @@ export function Hero() {
               <span className="font-bold">Built for Athletes</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right — phone + dish hero image with floating chips */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="lg:col-span-7 relative"
-        >
+        <div className="lg:col-span-7 relative">
           <div
             aria-hidden
             className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none"

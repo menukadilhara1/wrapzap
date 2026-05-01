@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const features = [
   {
     n: "01",
@@ -36,12 +34,8 @@ export function Features() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border rounded-[2rem] overflow-hidden border border-border">
         {features.map((f) => (
-          <motion.div
+          <div
             key={f.n}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: parseInt(f.n) * 0.1 }}
             className="bg-card p-8 lg:p-10 flex flex-col gap-6 hover:bg-secondary transition-colors"
           >
             <span className="text-accent font-extrabold tabular-nums text-sm tracking-widest">
@@ -49,7 +43,7 @@ export function Features() {
             </span>
             <h3 className="text-2xl font-bold tracking-tight">{f.t}</h3>
             <p className="text-muted-foreground font-medium leading-relaxed">{f.d}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
